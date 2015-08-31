@@ -1,6 +1,6 @@
 'use strict';
 
-import getHashParams from 'javascript/hashSubscriber';
+import getHashParams from 'javascript/getHashParams';
 
 const path ='http://someurl.com/this-text-shouldnt-matter';
 
