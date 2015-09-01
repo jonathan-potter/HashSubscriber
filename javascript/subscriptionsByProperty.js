@@ -1,13 +1,10 @@
 'use strict';
 
 const SUBSCRIPTIONS_BY_PROPERTY_PROTOTYPE = {
-
-  subscriptions: {},
-
   add({property, subscription}) {
     let currentSubscriptions = this.subscriptions[property];
     
-    if (!currentSubscriptions || currentSubscriptions.length === 0) {
+    if (!currentSubscriptions || Object.keys(currentSubscriptions).length === 0) {
       this.subscriptions[property] = {};
     }
 
@@ -18,8 +15,8 @@ const SUBSCRIPTIONS_BY_PROPERTY_PROTOTYPE = {
   remove({property, subscription}) {
     let currentSubscriptions = this.subscriptions[property];
 
-    if (!currentSubscriptions || currentSubscriptions.length === 0) {
-      this.subscriptions[property] = [];
+    if (!currentSubscriptions || Object.keys(currentSubscriptions).length === 0) {
+      this.subscriptions[property] = {};
     }
 
     delete this.subscriptions[property][subscription.uuid];
@@ -28,7 +25,11 @@ const SUBSCRIPTIONS_BY_PROPERTY_PROTOTYPE = {
 };
 
 export default () => {
-  return Object.create(SUBSCRIPTIONS_BY_PROPERTY_PROTOTYPE);
+  let subscriptionsByProperty = Object.create(SUBSCRIPTIONS_BY_PROPERTY_PROTOTYPE);
+
+  subscriptionsByProperty.subscriptions = {};
+
+  return subscriptionsByProperty
 };
 
 export { SUBSCRIPTIONS_BY_PROPERTY_PROTOTYPE };
