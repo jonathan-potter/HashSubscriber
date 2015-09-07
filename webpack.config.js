@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-  entry: "./javascript/init",
+  entry: "./test/manual/manualTest",
   output: {
     path: __dirname,
     filename: "bundle.js",
@@ -22,5 +22,6 @@ module.exports = {
       }
     ]
   },
-  plugins: []
+  plugins: [],
+  devtool: "#inline-source-map"
 };

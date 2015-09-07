@@ -14,6 +14,8 @@ export default ({getHashParams, subscriptionsByProperty, subscriptionsByUUID, ke
   let oldParams = getHashParams(event.oldURL);
   let newParams = getHashParams(event.newURL);
 
+  let subscribedKeys = Object.keys(subscriptionsByProperty.subscriptions);
+
   /* identify the keys with changed values */
   let keysWithChanges = keysWithChangedValues(oldParams, newParams);
 
@@ -23,7 +25,7 @@ export default ({getHashParams, subscriptionsByProperty, subscriptionsByUUID, ke
   /* loop through all of the subscribedEvent names looking */
   /* for differences between newParams and oldParams */
   let subscriptionUUIDs = keysWithSubscribedEvents.map(key => {
-    return subscriptionsByProperty[key];
+    return Object.keys(subscriptionsByProperty.subscriptions[key]);
   });
 
   subscriptionUUIDs = unique(flatten(subscriptionUUIDs));

@@ -13,7 +13,7 @@ export default ({properties, callback}) => {
 
   subscription.properties = properties;
   subscription.callback = callback;
-  subscription.guid = uuid.v4();
+  subscription.uuid = uuid.v4();
 
   return subscription;
 };

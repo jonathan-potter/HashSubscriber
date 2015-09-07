@@ -1,11 +1,11 @@
 'use strict';
 
-export default (Subscription, subscriptions, subscriptionsByProperty, properties, callback) => {
+export default ({Subscription, subscriptionsByUUID, subscriptionsByProperty, properties, callback}) => {
   /* make a subscription */
   let subscription = Subscription({properties, callback});
 
-  /* add the subscription to the subscriptions object */
-  subscriptions[subscription.uuid] = subscription;
+  /* add the subscription to the subscriptionsByUUID object */
+  subscriptionsByUUID[subscription.uuid] = subscription;
 
   /* add references to the subscription to each of the */
   /* subscribed properties */
