@@ -29,7 +29,7 @@ export default () => {
 
   subscriptionsByProperty.subscriptions = {};
 
-  return subscriptionsByProperty
+  return subscriptionsByProperty;
 };
 
 export { SUBSCRIPTIONS_BY_PROPERTY_PROTOTYPE };

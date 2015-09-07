@@ -10,6 +10,8 @@ export default (Subscription, subscriptions, subscriptionsByProperty, properties
   /* add references to the subscription to each of the */
   /* subscribed properties */
   properties.forEach((property) => {
-    subscriptionsByProperty.add.call(subscriptionsByProperty, {property, subscription});
+    subscriptionsByProperty.add({property, subscription});
   });
 };
+
+
