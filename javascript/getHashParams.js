@@ -20,26 +20,3 @@ export default (url) => {
     return hash;
   }, {});
 };
-
-// function hashChangeHandler(event) {
-//   let newParams = getHashParams(event.newURL);
-//   let oldParams = getHashParams(event.oldURL);
-
-//   map(subscribedEvents, subscribedEventName => {
-
-//   });
-//   /* loop through all of the subscribedEvent names looking */
-//   /* for differences between newParams and oldParams */
-
-//   /* trigger events for each of the events found */
-// }
-
-// let subscribedEvents = {};
-// addEventListener('hashchange', hashChangeHandler);
-
-// function subscribeToHashValues(hashValues, callback) {
-  
-// }
-
-// export { getHashParams, hashChangeHandler, subscribeToHashValues };
-// export { getHashParams };
