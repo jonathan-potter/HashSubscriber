@@ -7,6 +7,7 @@ import subscribe               from 'javascript/subscribe';
 import Subscription            from 'javascript/Subscription';
 import SubscriptionsByProperty from 'javascript/subscriptionsByProperty';
 import subscriptionsByUUID     from 'javascript/subscriptionsByUUID';
+import unsubscribe             from 'javascript/unsubscribe';
 
 let subscriptionsByProperty = SubscriptionsByProperty();
 
@@ -32,12 +33,19 @@ export default {
   subscribe(properties, callback) {
     this.ensureInitialization();
 
-    subscribe({
+    return subscribe({
       Subscription,
       subscriptionsByUUID,
       subscriptionsByProperty,
       properties,
       callback
+    });
+  },
+  unsubscribe(subscriptionUUID) {
+    unsubscribe({
+      subscriptionUUID,
+      subscriptionsByUUID,
+      subscriptionsByProperty
     });
   }
 };

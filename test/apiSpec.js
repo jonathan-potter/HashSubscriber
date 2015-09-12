@@ -56,4 +56,10 @@ describe('HashSubscriber', () => {
       /* i'm not sure how I should test this. */
     });
   });
+
+  describe('unsubscribe', () => {
+    xit('calls unsubscribe', () => {
+      /* i'm not sure how I should test this. */
+    });
+  });
 });
