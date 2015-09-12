@@ -24,4 +24,16 @@ describe('HashSubscriber', () => {
       expect(HashSubscriber.init).not.toHaveBeenCalled();
     });
   });
+
+  describe('init', () => {
+    beforeEach(() => {
+      spyOn(window, 'addEventListener');
+    });
+
+    it('adds hashChangeHandler as an event handler for hashchange', () => {
+      HashSubscriber.init();
+
+      expect(window.addEventListener).toHaveBeenCalled();
+    });
+  });
 });
