@@ -10,7 +10,8 @@ import subscriptionsByUUID     from 'javascript/subscriptionsByUUID';
 
 let subscriptionsByProperty = SubscriptionsByProperty();
 
-window.HashSubscriber = {
+/* probably should migrate this to a factory at some point to avoid possible singleton issues */
+export default {
   ensureInitialization() {
     if (!this.initialized) {
       this.init();
