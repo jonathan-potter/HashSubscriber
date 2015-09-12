@@ -1,6 +1,7 @@
 'use strict';
 
 import HashSubscriber from 'javascript/api';
+import subscribe from 'javascript/subscribe';
 
 describe('HashSubscriber', () => {
   describe('ensureInitialization', () => {
@@ -34,6 +35,25 @@ describe('HashSubscriber', () => {
       HashSubscriber.init();
 
       expect(window.addEventListener).toHaveBeenCalled();
+    });
+  });
+
+  describe('subscribe', () => {
+    beforeEach(() => {
+      spyOn(HashSubscriber, 'ensureInitialization');
+    });
+
+    it('ensures initialization', () => {
+      let somePropertyNames = ['some', 'property', 'names'];
+      let aCallback = () => {};
+
+      HashSubscriber.subscribe(somePropertyNames, aCallback);
+
+      expect(HashSubscriber.ensureInitialization).toHaveBeenCalled();
+    });
+
+    xit('calls subscribe', () => {
+      /* i'm not sure how I should test this. */
     });
   });
 });

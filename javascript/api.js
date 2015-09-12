@@ -37,6 +37,7 @@ export default {
       subscriptionsByUUID,
       subscriptionsByProperty,
       properties,
-      callback});
+      callback
+    });
   }
 };
