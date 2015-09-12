@@ -12,6 +12,8 @@ export default ({Subscription, subscriptionsByUUID, subscriptionsByProperty, pro
   properties.forEach((property) => {
     subscriptionsByProperty.add({property, subscription});
   });
+
+  return subscription.uuid;
 };
 
 
