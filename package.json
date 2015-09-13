@@ -1,12 +1,12 @@
 {
   "name": "HashSubscriber",
   "version": "0.1.0",
-  "description": "allow events to be bound to specific changing values in the browser's location hash",
+  "description": "allow callbacks to be bound to groups of changing values in the browser's location hash",
   "repository": {
     "type": "git",
     "url": "https://github.com/jonathan-potter/HashSubscriber.git"
   },
-  "author": "Jonathan Potter",
+  "author": "Jonathan Potter (https://github.com/jonathan-potter)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jonathan-potter/HashSubscriber/issues"
@@ -30,7 +30,13 @@
     "karma-webpack": "^1.7.0",
     "phantomjs": "^1.9.18"
   },
+  "main": "./javascript/api.js",
   "scripts": {
     "test": "./node_modules/karma/bin/karma start"
-  }
+  },
+  "keywords": [
+    "hash",
+    "hashchange",
+    "event"
+  ]
 }
