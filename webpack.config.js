@@ -5,7 +5,8 @@ module.exports = {
   output: {
     path: __dirname,
     filename: "bundle.js",
-    sourceMapFilename: "sourcemap"
+    library: "HashSubscriber",
+    libraryTarget: "commonjs2"
   },
   resolve: {
     // Allow to omit extensions when requiring these files
