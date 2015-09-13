@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-  entry: "./test/manual/manualTest",
+  entry: "./javascript/api",
   output: {
     path: __dirname,
     filename: "bundle.js",
@@ -11,7 +11,7 @@ module.exports = {
     // Allow to omit extensions when requiring these files
     extensions: ['', '.js', '.jsx', '.js.jsx'],
     alias: {
-      javascript: path.resolve(__dirname, 'javascript'),
+      javascript: path.resolve(__dirname, 'javascript')
     }
   },
   module: {

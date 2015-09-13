@@ -16,7 +16,7 @@ SomeWebsite.com/#booleanValue&key=value&anotherKey=anotherValue
 
 ### Operational Example:
 ```js
-import HashSubscriber from 'HashSubscriber'
+import HashSubscriber from 'hash-subscriber'
 
 var callbackOne = function () { console.log('group one'); }
 var callbackTwo = function () { console.log('group two'); }

@@ -11,11 +11,10 @@
   "bugs": {
     "url": "https://github.com/jonathan-potter/HashSubscriber/issues"
   },
-  "homepage": "https://github.com/jonathan-potter/HashSubscriber",
+  "homepage": "https://github.com/jonathan-potter/hash-subscriber",
   "dependencies": {
     "lodash": "^3.10.1",
-    "node-uuid": "^1.4.3",
-    "webpack": "^1.11.0"
+    "node-uuid": "^1.4.3"
   },
   "devDependencies": {
     "babel-core": "^5.8.22",
@@ -28,9 +27,10 @@
     "karma-nyan-reporter": "^0.2.2",
     "karma-phantomjs-launcher": "^0.2.1",
     "karma-webpack": "^1.7.0",
-    "phantomjs": "^1.9.18"
+    "phantomjs": "^1.9.18",
+    "webpack": "^1.12.1"
   },
-  "main": "./javascript/api.js",
+  "main": "./bundle.js",
   "scripts": {
     "test": "./node_modules/karma/bin/karma start"
   },
