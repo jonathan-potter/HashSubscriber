@@ -1,5 +1,5 @@
 {
-  "name": "HashSubscriber",
+  "name": "hash-subscriber",
   "version": "0.1.0",
   "description": "allow callbacks to be bound to groups of changing values in the browser's location hash",
   "repository": {
@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/jonathan-potter/HashSubscriber/issues"
   },
-  "homepage": "https://github.com/jonathan-potter/hash-subscriber",
+  "homepage": "https://github.com/jonathan-potter/HashSubscriber",
   "dependencies": {
     "lodash": "^3.10.1",
     "node-uuid": "^1.4.3"
