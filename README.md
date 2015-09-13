@@ -4,7 +4,7 @@ Hash Subscriber
 ###SUMMARY:
 --------
 
-[HashSubscriber](https://github.com/jonathan-potter/HashSubscriber) allows callbacks to be bound to specific changes within the browser's location hash. This will allow separate sections of your program to only listen for changes in the location hash that are important for their operation. This also means that hashchanges that aren't relevant can be ignored. 
+[HashSubscriber](https://www.npmjs.com/package/hash-subscriber) allows callbacks to be bound to specific changes within the browser's location hash. This will allow separate sections of your program to only listen for changes in the location hash that are important for their operation. This also means that hashchanges that aren't relevant can be ignored. 
 
 ##### Assumptions:
 properties in the location hash are assumed to be organized in a key value format separated by '&'. This is similar to the typical query string.
