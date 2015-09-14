@@ -1,6 +1,6 @@
 {
   "name": "hash-subscriber",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "allow callbacks to be bound to groups of changing values in the browser's location hash",
   "repository": {
     "type": "git",
